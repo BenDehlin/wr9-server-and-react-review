@@ -1,7 +1,7 @@
 import { Component } from "react"
 import axios from "axios"
-import Movie from "./Movie"
-import AddMovie from "./AddMovie"
+import Movie from "../Movie/Movie"
+import AddMovie from "../AddMovie/AddMovie"
 
 class MoviesComponent extends Component {
   constructor() {

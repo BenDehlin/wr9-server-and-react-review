@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../Styles/Header.css"
+import "./Header.css"
 
 const HeaderHook = () => {
   const [displayMenu, setDisplayMenu] = useState(false)
