@@ -24,7 +24,7 @@ class Movie extends Component {
 
   handleSave = () => {
       const {name, director} = this.state
-      this.props.editMovie(this.props.movie.id, {name, director})
+      this.props.editMovie(this.props.movie.movie_id, {name, director})
       this.setState({
           editing: false
       })
@@ -33,7 +33,7 @@ class Movie extends Component {
   render() {
     const { movie, deleteMovie } = this.props
     return (
-      <div key={movie.id}>
+      <div key={movie.movie_id}>
         {this.state.editing ? (
           <div>
               <input value={this.state.name} onChange={(e) => this.handleName(e)} />
@@ -44,7 +44,7 @@ class Movie extends Component {
           <div>
             <span>{movie.name}</span>
             <button onClick={() => this.setState({editing: true})}>Edit</button>
-            <button onClick={() => deleteMovie(movie.id)}>X</button>
+            <button onClick={() => deleteMovie(movie.movie_id)}>X</button>
           </div>
         )}
       </div>

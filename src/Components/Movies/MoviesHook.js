@@ -16,9 +16,9 @@ const MoviesHook = (props) => {
       .catch(() => console.log("there was an error"))
   }, [])
 
-  const deleteMovie = (id) => {
+  const deleteMovie = (movie_id) => {
     axios
-      .delete(`/api/movies/${id}`)
+      .delete(`/api/movies/${movie_id}`)
       .then((res) => {
         setMovies(res.data)
       })
@@ -32,9 +32,9 @@ const MoviesHook = (props) => {
       .catch(() => console.log("there was an error"))
   }
 
-  const editMovie = (id, body) => {
+  const editMovie = (movie_id, body) => {
     axios
-      .put(`/api/movies/${id}`, body)
+      .put(`/api/movies/${movie_id}`, body)
       .then((res) => setMovies(res.data))
       .catch(() => console.log("there was an error"))
   }
