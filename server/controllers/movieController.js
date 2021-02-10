@@ -13,6 +13,13 @@ module.exports = {
         })
         // res.status(200).send(movies)
     },
+    getMovie: (req, res) => {
+        const db = req.app.get('db')
+        const {movie_id} = req.params
+        db.movies.get_movie(movie_id).then(movies => {
+            res.status(200).send(movies[0])
+        })
+    },
     addMovie: (req, res) => {
         const db = req.app.get('db')
         const {name, director} = req.body

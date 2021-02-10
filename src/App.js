@@ -1,14 +1,16 @@
 import './App.css';
-import Header from './Components/Header/Header'
+import HeaderHook from './Components/Header/HeaderHook'
 // import MoviesComponent from './Components/Movies/MoviesComponent'
 // import Hooks from './Components/HooksExample/Hooks'
-import MoviesHook from './Components/Movies/MoviesHook'
+import routes from './routes'
+// import MoviesHook from './Components/Movies/MoviesHook'
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <MoviesHook />
+      <HeaderHook />
+      {routes}
+      {/* <MoviesHook /> */}
       {/* <MoviesComponent /> */}
       {/* <Hooks /> */}
     </div>

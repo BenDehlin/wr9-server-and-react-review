@@ -16,6 +16,7 @@ massive({
 })
 
 app.get('/api/movies', movieCtrl.getMovies)
+app.get('/api/movie/:movie_id', movieCtrl.getMovie)
 app.delete('/api/movies/:movie_id', movieCtrl.deleteMovie)
 app.post('/api/movies', movieCtrl.addMovie)
 app.put('/api/movies/:movie_id', movieCtrl.editMovie)

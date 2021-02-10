@@ -1,7 +1,7 @@
 import { Component } from "react"
 import "./Header.css"
 
-class Header extends Component {
+class HeaderClass extends Component {
   constructor() {
     super()
     this.state = {
@@ -46,4 +46,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default HeaderClass

@@ -1,4 +1,5 @@
 import { Component } from "react"
+import {withRouter} from 'react-router-dom'
 
 class Movie extends Component {
   constructor() {
@@ -43,6 +44,7 @@ class Movie extends Component {
         ) : (
           <div>
             <span>{movie.name}</span>
+            <button onClick={() => this.props.history.push(`/movie/${movie.movie_id}`)}>View Movie with id {movie.movie_id}</button>
             <button onClick={() => this.setState({editing: true})}>Edit</button>
             <button onClick={() => deleteMovie(movie.movie_id)}>X</button>
           </div>
@@ -52,4 +54,4 @@ class Movie extends Component {
   }
 }
 
-export default Movie
+export default withRouter(Movie)
