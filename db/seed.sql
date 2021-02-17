@@ -1,5 +1,6 @@
-CREATE TABLE movies (
-    movie_id SERIAL PRIMARY KEY,
-    name VARCHAR(50),
-    director VARCHAR(50)
-);
+INSERT INTO movies (name, director)
+VALUES ('some movie name', 'some director'),
+('some other movie name', 'some other director');
+
+INSERT INTO books (name, author)
+VALUES ('some book', 'some author');

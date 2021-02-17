@@ -2,14 +2,17 @@ import { useState } from "react"
 import "./Header.css"
 // import {withRouter} from 'react-router-dom'
 import {useHistory} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 const HeaderHook = (props) => {
   const [displayMenu, setDisplayMenu] = useState(false)
   // const history = useHistory()
   const {push} = useHistory()
+  console.log(props)
   return (
     <header className="header">
       <nav className="buttons-container">
+      {props.user && <p>YOUR EMAIL: {props.user.email}</p>}
         <button className="button">About Us</button>
         <button className="button" onClick={() => push('/')}>Home</button>
         <button className="button">Contact Us</button>
@@ -35,5 +38,7 @@ const HeaderHook = (props) => {
   )
 }
 
-// export default withRouter(HeaderHook)
-export default HeaderHook
+const mapStateToProps = state => {
+  return state.authReducer
+}
+export default connect(mapStateToProps)(HeaderHook)

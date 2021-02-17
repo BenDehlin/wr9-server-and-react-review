@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-import Movie from "../Movie/Movie"
+import Movie from "../Movie/MovieClass"
 // import AddMovie from "../AddMovie/AddMovie"
 import AddMovieHook from '../AddMovie/AddMovieHook'
 
