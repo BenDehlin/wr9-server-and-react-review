@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS books;
+DROP TABLE IF EXISTS posts;
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE movies (
@@ -18,4 +19,11 @@ CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     email VARCHAR(250),
     password VARCHAR(2500)
+);
+
+CREATE TABLE posts (
+    post_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(user_id),
+    post_title VARCHAR(50),
+    post_content VARCHAR (2000)
 );

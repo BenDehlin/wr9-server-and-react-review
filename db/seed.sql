@@ -4,3 +4,8 @@ VALUES ('some movie name', 'some director'),
 
 INSERT INTO books (name, author)
 VALUES ('some book', 'some author');
+
+
+INSERT INTO posts (user_id, post_title, post_content)
+VALUES (1, 'some title', 'some content');
+

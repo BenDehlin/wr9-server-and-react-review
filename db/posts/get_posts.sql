@@ -1,0 +1,1 @@
+SELECT p.post_id, p.user_id, p.post_title, p.post_content, u.email FROM posts p JOIN users u ON p.user_id = u.user_id;

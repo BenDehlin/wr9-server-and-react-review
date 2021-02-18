@@ -4,6 +4,7 @@ import MoviesHook from './Components/Movies/MoviesHook'
 import FullPageMovieClass from './Components/FullPageMovie/FullPageMovieClass'
 import Books from './Components/Books/Books'
 import AuthClass from './Components/Auth/AuthClass'
+import Posts from './Components/Posts/Posts'
 
 
 export default (
@@ -13,5 +14,6 @@ export default (
         <Route path='/movie/:movie_id' component={FullPageMovieClass} />
         <Route path='/books' component={Books} />
         <Route path='/auth' component={AuthClass} />
+        <Route path='/posts' component={Posts} />
     </Switch>
 )
