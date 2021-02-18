@@ -38,6 +38,10 @@ const Posts = (props) => {
   )
 }
 
+// const mapStateToProps = (state) => {
+//   return state.authReducer
+// }
+
 export default connect((state) => state.authReducer)(Posts)
 
 // this.state = {
